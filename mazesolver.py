@@ -10,6 +10,7 @@ prev=(0,0)
 curr=(0,0)
 b=a
 def backtracker():
+	global p
         while 1:
 		curr=p[-1]
 		p=p[:-2]
