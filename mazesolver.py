@@ -1,21 +1,54 @@
 import time,pdb
+tr=[]
 a=[	[1,1,1,0,0],
 	[0,0,1,0,0],
 	[1,1,1,1,0],
-	[0,0,0,1,1],
-	[0,0,0,0,1]] #matrix
+	[1,0,0,0,1],
+	[1,1,1,1,1]] #matrix
 n=len(a)
 prev=(0,0)
 curr=(0,0)
 b=a
 def backtracker(c,p):
 	while 1:
+		curr=p[-1]
+		p=p[:-2]
+		flag=1	
+	if curr[0]<n-1:	
+		if b[curr[0]+1][curr[1]]==1:
+			prev=curr
+			curr=(curr[0]+1,curr[1])
+			return curr,prev
+	if curr[0]>0 and flag==1:
+		if b[curr[0]-1][curr[1]]==1:
+			prev=curr
+			curr=(curr[0]-1,curr[1])
+			return curr,prev
+	if curr[1]<n-1 and flag==1:
+		if b[curr[0]][curr[1]+1]==1:
+			prev=curr
+			curr=(curr[0],curr[1]+1)
+			return curr,prev
+	if curr[1]> 0 and flag==1:
+		if b[curr[0]][curr[1]-1]==1:
+			prev=curr
+			curr=(curr[0],curr[1]-1)
+			return curr,prev
+
+
+
 		
 #pdb.set_trace()
 while 1: 	
+	tr.append(curr)
 	b[curr[0]][curr[1]]=10
 	print curr
 	flag=1	
+	if curr==(n-1,n-1):
+			print "Woah!"
+			break
+
+
 	if curr[0]<n-1:	
 		if b[curr[0]+1][curr[1]]==1:
 			prev=curr
@@ -41,6 +74,6 @@ while 1:
 			print "Woah!"
 			break
 		else:
-			curr=backtracker(prev,curr)
+			curr,prev=backtracker()
 	time.sleep(1)
 		
