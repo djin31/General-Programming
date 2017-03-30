@@ -1,5 +1,5 @@
 import time,pdb
-tr=[]
+p=[]
 a=[	[1,1,1,0,0],
 	[0,0,1,0,0],
 	[1,1,1,1,0],
@@ -9,7 +9,7 @@ n=len(a)
 prev=(0,0)
 curr=(0,0)
 b=a
-def backtracker(c,p):
+def backtracker():
         while 1:
 		curr=p[-1]
 		p=p[:-2]
@@ -40,7 +40,7 @@ def backtracker(c,p):
 		
 #pdb.set_trace()
 while 1: 	
-	tr.append(curr)
+	p.append(curr)
 	b[curr[0]][curr[1]]=10
 	print curr
 	flag=1	
