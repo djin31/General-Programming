@@ -12,7 +12,7 @@ b=a
 def backtracker():
 	global p
         while 1:
-		curr=p[-1]
+		curr=p[-2]
 		p=p[:-2]
 		flag=1	
 		if curr[0]<n-1:	
