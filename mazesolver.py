@@ -1,11 +1,24 @@
 import time,pdb
 p=[]
-a=[[1,1,1,1,1,1],
-   [1,0,1,0,0,1],
-   [1,0,1,0,0,1],
-   [1,1,1,0,0,1],
-   [0,0,0,0,0,1],
-   [1,0,1,1,1,1]] #matrix
+c=raw_input("Enter the length of maze(0 if u want a default maze")
+if c=="0":
+  a=[[1,1,1,1,1,1],
+     [1,0,1,0,0,1],
+     [1,0,1,0,0,1],
+     [1,1,1,0,0,1],
+     [0,0,0,0,0,1],
+     [1,0,1,1,1,1]] #matrix
+else:
+  a=[]
+  for i in xrange(int(c)):
+    tmp=raw_input().split(' ')
+    tmp2=[]
+    for i in xrange(int(c)):
+      tmp2.append(int(tmp[i]))
+    a.append(tmp2)
+  
+for i in a:
+  print i
 n=len(a)
 prev=(0,0)
 curr=(0,0)
@@ -100,4 +113,3 @@ for i in range(n):
       print " ",
     
   print " "
-		
