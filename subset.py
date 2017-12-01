@@ -1,3 +1,4 @@
+#pass the set for which you want to find the powerset as an argument in a list
 def subset(a):
 	if len(a)==1:
 		return [[],a]
