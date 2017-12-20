@@ -1,3 +1,5 @@
+#pass a list of items to be permuted as argument, returns a list of all possible permutations
+
 def permute(l):
     ll=[]
     num=len(l)
