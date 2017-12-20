@@ -1,2 +1,2 @@
 # python-programs
-A reposiory of useful python programs for general tasks
+A repository of useful python programs for general tasks
