@@ -1,3 +1,4 @@
+#enter the maze in form of binary grid, 1 representing a path and 0 representing a wall
 import time,pdb
 p=[]
 c=raw_input("Enter the length of maze(0 if u want a default maze")
