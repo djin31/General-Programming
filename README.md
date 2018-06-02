@@ -1,2 +1,1 @@
-# python-programs
-A repository of useful python programs for general tasks
+A repository for some General Purpose Programs and some interesting assignments done as part of Data Structures and Algorithms course
